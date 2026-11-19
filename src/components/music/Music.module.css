@@ -1,0 +1,35 @@
+:root {
+  --album-width: 200px;
+}
+
+/* Album gallery */
+
+.albumContainer {
+	display: flex;
+}
+.albumContainer > .albumImg {
+  min-width: var(--album-width);
+	width: var(--album-width);
+}
+
+.albumImg {
+	align-self: flex-start;
+  padding: var(--padding);
+  padding-left: 0;
+}
+.albumImg:hover {
+	mix-blend-mode: luminosity;
+}
+
+@media (width < 800px) {
+  :root {
+    --album-width: 100px;
+  }
+
+  .albumContainer {
+    flex-direction: column;
+  }
+  .albumImg {
+    padding-bottom: 0;
+  }
+}

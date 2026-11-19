@@ -1,0 +1,115 @@
+/* Add links page such here too */
+
+
+
+.corkboard {
+	font-size: 0.9em;
+	background-color: var(--light-green);
+	margin: 0;
+}
+.corkboard .scrollbox {
+	display: flex;
+	flex-direction: column;
+	background: url("../images/map/noise.png");
+	background-size: cover;
+	background-repeat: repeat-y;
+	height: var(--corkboard-height);
+	padding: var(--padding);
+}
+
+.note,
+.photo {
+  box-shadow: 1px 4px 5px rgba(0,0,0,0.2);
+	padding: var(--padding);
+}
+
+.note {
+	background: #dbefaf;
+	width: 140px;
+	align-items: center;
+}
+
+.photo {
+	background: white;
+  padding-bottom: calc(2 * var(--padding));
+}
+.photo img {
+	width: 100px;
+	border: 2px rgb(0,0,0,0.5) inset;
+}
+
+.circleContainer {
+	display: flex;
+	background: #dbefaf;
+	width: 40px;
+	height: 40px;
+	padding: calc(var(--padding));
+	border: 8px #56936b solid;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+}
+
+.miniBrochure {
+	box-shadow: 1px 4px 5px rgba(0,0,0,0.2);
+}
+
+.signpost {
+	background-image: linear-gradient(to right, #396247, #56936b, #396247, #004a2a);
+}
+.sign {
+	background-image: linear-gradient(to bottom, #396247, #56936b, #396247, #004a2a);
+}
+
+.imood {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+.imood p {
+  margin: 0 var(--margin) 0 0;
+}
+.imood img {
+  width: min-content;
+}
+
+/* CDRing styling */
+/* Source: https://cdring.neocities.org/cdring/onionring.css */
+
+#cdr {
+  width: 150px;
+}
+#cdr p {
+  margin: 0.3em 0; 
+}
+
+.cdrWidget {
+  text-align: center;
+}
+
+.cdrBadge {
+  display: block;
+  max-width: 100px;
+  height: auto;
+	margin: 0.3em 0; 
+}
+
+.cdrNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+  margin: 0.3em 0; 
+}
+.cdrNav .cdrPrev,
+.cdrNav .cdrNext {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* KGLW webring styling */
+
+#kglwButton {
+	margin: 0 var(--margin);
+}

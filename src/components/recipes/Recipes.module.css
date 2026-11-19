@@ -1,0 +1,52 @@
+:root {
+  --book-width: 800px;
+}
+
+/* Desktop */
+
+@media (width > 1100px) {
+  .recipeContainer {
+    width: var(--book-width);
+    overflow-x: hidden;
+  }
+
+  .book {
+    background-color: black;
+    display: flex !important;
+    position: absolute;
+    height: 100%;
+    width: var(--book-width);
+  }
+	.book:target {
+		display: flex;
+		z-index: 2;
+	}
+	.book#start {
+		display: flex;
+		z-index: 1;
+	}
+  
+  .pageL, .pageR {
+    height: 100%;
+    width: 50%;
+    overflow-y: auto;
+    /* padding-right: var(--padding);
+    border-right: var(--border); */
+  }
+  /* .pageR {
+    padding-left: var(--padding);
+  } */
+  .seam {
+    background-color: var(--light-grey);
+    width: 1px;
+    margin: 0 var(--padding);
+  }
+}
+
+.book ol {
+	list-style: outside decimal;
+}
+.book li {
+	margin-left: -1em;
+	line-height: 150%;
+}

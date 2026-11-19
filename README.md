@@ -1,1 +1,1 @@
-# e-walk
+[e-walk.neocities.org](https://e-walk.neocities.org/) | [profile](https://neocities.org/site/e-walk)

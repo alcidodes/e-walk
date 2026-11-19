@@ -1,0 +1,55 @@
+:root {
+	--legend-width: 170px;
+}
+
+/* Navigation */
+
+.mapNav {
+	display: flex;
+	position: absolute;
+	left: calc(-1 * var(--legend-width));
+	top: 0;
+	height: 100%;
+	pointer-events: none;
+	transition: .1s ease-in-out 0s;
+}
+.mapNav > * {
+  background-color: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	pointer-events: all;
+}
+.mapNav > button {
+	align-self: flex-start;
+	padding: var(--padding);
+	border: none;
+	cursor: pointer;
+}
+
+.legend {
+	display: block;
+	width: var(--legend-width);
+	height: 100%;
+	padding: var(--padding);
+	overflow: auto;
+}
+.legend > *:first-child {
+	margin-top: 0;
+}
+.legend ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.legend ul li {
+  margin-top: 3px;
+}
+.legend ul li a,
+.legend ul li div {
+  display: flex;
+  align-items: center;
+  gap: var(--padding);
+}
+.legend img {
+  width: 18px;
+  height: 18px;
+}
