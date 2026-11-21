@@ -20,10 +20,8 @@
 	background: url("../../images/map/noise.png");
 	background-size: cover;
 	background-repeat: repeat-y;
-  /* height: calc(100% - var(--changelog-height) - 50px); */
   height: 380px;
   padding: var(--padding);
-  padding-bottom: 0;
   overflow: auto;
   border: 5px inset #56936b; 
 }
@@ -41,7 +39,9 @@
 
 .note {
 	background: var(--lighter-green);
-	width: 140px;
+	display: flex;
+	flex-direction: row;
+	min-width: 140px;
 	align-items: center;
 }
 
@@ -53,18 +53,6 @@
 .photo img {
 	width: 100px;
 	border: 2px rgb(0,0,0,0.5) inset;
-}
-
-.circleContainer {
-	display: flex;
-	background: var(--lighter-green);
-	width: 40px;
-	height: 40px;
-	padding: calc(var(--padding));
-	border: 8px #56936b solid;
-	border-radius: 50%;
-	align-items: center;
-	justify-content: center;
 }
 
 .miniBrochure {

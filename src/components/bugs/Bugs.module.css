@@ -1,0 +1,52 @@
+:root {
+  --figure-border-width: 20px;
+  --figure-padding: 30px;
+}
+
+.bugContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow-x: auto;
+  width: 100%;
+}
+.bugContainer .figureBorder {
+  border: var(--figure-border-width) outset;
+	border-color: #62462c #62462c #4d3221 #4d3221;
+  margin: var(--margin);
+}
+.bugContainer figure {
+  background-color: white;
+  border: var(--figure-border-width) inset;
+	border-color: #4d3221 #4d3221 #62462c #62462c;
+  box-shadow: inset 5px 5px 20px rgba(0, 0, 0, 0.4), inset -5px -5px 20px rgba(0, 0, 0, 0.4);
+  margin: 0;
+  padding: var(--figure-padding);
+}
+.bugContainer figcaption {
+  color: black;
+  text-align: center;
+}
+.bugContainer .figureImg {
+  width: 300px;
+  height: 400px;
+}
+.bugContainer .figureImg img {
+  filter: brightness(95%);
+}
+
+@media (width < 500px) {
+  .bugContainer {
+    flex-direction: column;
+    padding: 0;
+  }
+  .bugContainer figure {
+    margin: 0;
+  }
+  .bugContainer .imgContainer {
+    width: 100%;
+    height: unset;
+    margin: 0;
+  }
+}

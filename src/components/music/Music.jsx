@@ -2,6 +2,8 @@ import { albumImgPath } from '../../constants'
 import musicData from '../../data/musicData'
 import currentlyListening from '../../data/currentlyListening'
 import Nav from '../nav/Nav'
+import AsideDetails from '../aside/AsideDetails'
+import LoadedImage from '../image/LoadedImage'
 import styles from './Music.module.css'
 
 const toAlbumImgPath = (id) => `${albumImgPath}${id}-Cover-Art.jpg`
@@ -13,10 +15,10 @@ const Music = () => {
         <Nav />
         <h1>Welcome to the album gallery</h1>
         <p>here are some albums and soundtracks i love and recommend</p>
-        <div className={styles.asideDetails}>
+        <AsideDetails>
           <CurrentlyListening />
           <AlbumStats />
-        </div>
+        </AsideDetails>
       </aside>
       <main id="content">
         {musicData.map(album => AlbumInfo(album))}
@@ -28,7 +30,12 @@ const Music = () => {
 const AlbumInfo = (album) => {
   return (
     <div className={styles.albumContainer} key={album.id}>
-      <img className={styles.albumImg} src={toAlbumImgPath(album.id)}/>
+      {/* <img className={styles.albumImg} src={toAlbumImgPath(album.id)}/> */}
+      <LoadedImage
+        className={styles.albumImg}
+        src={toAlbumImgPath(album.id)}
+        alt={album.album}
+      />
       <div className={styles.albumText}>
         <p>
           ★ {album.album} ({album.year})<br/>
@@ -72,7 +79,12 @@ const CurrentlyListening = () => {
       <p>★ currently listening to...</p>
       <div className={styles.miniAlbumContainer}>
         {currentlyListening.map(a => 
-          <img key={a.id} src={toAlbumImgPath(a.id)} alt={a.album} title={a.album} />
+          <LoadedImage
+            key={a.id}
+            className={styles.miniAlbumImg}
+            src={toAlbumImgPath(a.id)}
+            alt={a.album} title={a.album}
+          />
         )}
       </div>
     </>

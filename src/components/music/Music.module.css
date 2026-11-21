@@ -17,7 +17,7 @@
   padding: var(--padding);
   padding-left: 0;
 }
-.albumImg:hover {
+.albumImg img:hover {
 	mix-blend-mode: luminosity;
 }
 
@@ -26,7 +26,8 @@
   flex-wrap: wrap;
   gap: var(--padding);
 }
-.miniAlbumContainer > img {
+
+.miniAlbumImg {
   width: 60px;
 }
 
@@ -56,11 +57,5 @@
   }
   .albumImg {
     padding-bottom: 0;
-  }
-}
-
-@media (width < 500px) {
-  .asideDetails {
-    display: none;
   }
 }

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="150" aria-label="mini brochure button">
+  <defs>
+    <linearGradient id="sky">
+      <stop offset="0%" stop-color="#9bdea8"/>
+      <stop offset="50%" stop-color="#dbefaf"/>
+      <stop offset="100%" stop-color="#9bdea8"/>
+    </linearGradient>
+  </defs>
+  <rect width="90" height="150" x="0" y="0" fill="#6dc37a"/>
+  <path fill="url(#sky)" d="M 0,75 Q 23,38 45,75 t 45,0 M 90,75 90,0 0,0 0,75"/>
+  <rect width="45" height="4" x="10" y="10" fill="black"/>
+  <rect width="45" height="4" x="25" y="20" fill="black"/>
+</svg>

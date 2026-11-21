@@ -26,7 +26,7 @@ const MapAside = () => {
         </Link>
 
         <div className={`${styles.animatedImg} ${styles.note}`} id={styles.right}
-          style={{ display: "flex", flexDirection: "row", rotate: "-4deg" }}
+          style={{ rotate: "-4deg" }}
         >
           <p style={{ marginRight: "1ch" }}>feeling:</p>
           <a href="https://www.imood.com/users/e_walk" target="_blank">
@@ -60,22 +60,24 @@ const MapAside = () => {
           <script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-widget.js"></script> */}
         </div>
 
-        <Signpost style={{ width: "35px" }}>
-          <div id="kglw-webring">
-            <p>kglw webring</p>
-            {/* <script type="text/javascript" src="https://kglw.neocities.org/onionring-variables.js"></script>
-            <script type="text/javascript" src="https://kglw.neocities.org/onionring-widget.js"></script> */}
-          </div>
+        <div className={styles.note} id="kglw-webring"
+          style={{ marginTop: "10px" }}
+        >
+          <p>kglw webring</p>
+          {/* <script type="text/javascript" src="https://kglw.neocities.org/onionring-variables.js"></script>
+          <script type="text/javascript" src="https://kglw.neocities.org/onionring-widget.js"></script> */}
+        </div>
 
+        <div className={styles.note}
+          style={{ textAlign: "center", alignSelf: "center", marginTop: "10px" }}
+        >
+          <a href="https://baccyflap.com/noai/?prv&s=ewa" target="_top">prev</a><p>|</p>
           <div>
-            <a href="https://baccyflap.com/noai/?prv&s=ewa" target="_top">prev</a><p>|</p>
-            <div>
-              <a href="https://baccyflap.com/noai" target="_blank">no ai webring</a>
-              <a href="https://baccyflap.com/noai/?rnd" target="_top" style={{ fontSize: "80%" }}>(random)</a>
-            </div>
-            <p>|</p><a href="https://baccyflap.com/noai/?nxt&s=ewa" target="_top">next</a>
+            <a href="https://baccyflap.com/noai" target="_blank">no ai webring</a>
+            <a href="https://baccyflap.com/noai/?rnd" target="_top" style={{ fontSize: "80%" }}>(random)</a>
           </div>
-        </Signpost>
+          <p>|</p><a href="https://baccyflap.com/noai/?nxt&s=ewa" target="_top">next</a>
+        </div>
       </div>
     </>
   )
