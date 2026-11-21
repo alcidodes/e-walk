@@ -6,4 +6,6 @@ const mapIconPath = mapImgPath + "icons/"
 
 const albumImgPath = imgPath + "music/"
 
-export { imgPath, mapImgPath, mapIconPath, albumImgPath }
+const bugImgPath = imgPath + "bugs/"
+
+export { imgPath, mapImgPath, mapIconPath, albumImgPath, bugImgPath }

@@ -1,0 +1,126 @@
+:root {
+	--changelog-height: 140px;
+}
+
+/* Changelog */
+
+.changelog {
+  height: var(--changelog-height);
+  overflow: auto;
+  list-style: none;
+  padding: 0;
+}
+
+/* Corkboard */
+
+.corkboard {
+	display: flex;
+	flex-direction: column;
+  background-color: var(--light-green);
+	background: url("../../images/map/noise.png");
+	background-size: cover;
+	background-repeat: repeat-y;
+  /* height: calc(100% - var(--changelog-height) - 50px); */
+  height: 380px;
+  padding: var(--padding);
+  padding-bottom: 0;
+  overflow: auto;
+  border: 5px inset #56936b; 
+}
+.corkboard p {
+  margin: 0;
+}
+
+/* Corkboard items */
+
+.note,
+.photo {
+  box-shadow: 1px 4px 5px rgba(0,0,0,0.2);
+	padding: 10px;
+}
+
+.note {
+	background: var(--lighter-green);
+	width: 140px;
+	align-items: center;
+}
+
+.photo {
+	background: white;
+  width: min-content;
+  padding-bottom: calc(1.5 * var(--padding));
+}
+.photo img {
+	width: 100px;
+	border: 2px rgb(0,0,0,0.5) inset;
+}
+
+.circleContainer {
+	display: flex;
+	background: var(--lighter-green);
+	width: 40px;
+	height: 40px;
+	padding: calc(var(--padding));
+	border: 8px #56936b solid;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+}
+
+.miniBrochure {
+	box-shadow: 1px 4px 5px rgba(0,0,0,0.2);
+}
+
+/* Animated image */
+
+.animatedImg {
+	transform-origin: top center;
+	width: min-content;
+	transition: .1s ease-in-out 0s;
+}
+.animatedImg#left:hover {
+	transform: rotate(5deg);
+}
+.animatedImg#right:hover {
+	transform: rotate(-5deg);
+}
+
+/* CDRing styling */
+/* Source: https://cdring.neocities.org/cdring/onionring.css */
+
+#cdr {
+  width: 150px;
+}
+#cdr p {
+  margin: 0.3em 0; 
+}
+
+.cdrWidget {
+  text-align: center;
+}
+
+.cdrBadge {
+  display: block;
+  max-width: 100px;
+  height: auto;
+	margin: 0.3em 0; 
+}
+
+.cdrNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+  margin: 0.3em 0; 
+}
+.cdrNav .cdrPrev,
+.cdrNav .cdrNext {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* KGLW webring styling */
+
+#kglwButton {
+	margin: 0 var(--margin);
+}

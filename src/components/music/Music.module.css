@@ -21,6 +21,31 @@
 	mix-blend-mode: luminosity;
 }
 
+.miniAlbumContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--padding);
+}
+.miniAlbumContainer > img {
+  width: 60px;
+}
+
+/* Album stats */
+
+.stats {
+  padding-bottom: var(--padding);
+}
+.stats table .bar {
+  background-color: var(--light-grey);
+  height: 10px;
+}
+.stats table tr > *:first-child {
+  min-width: 110px;
+}
+.stats table tr > *:last-child {
+  width: 100%;
+}
+
 @media (width < 800px) {
   :root {
     --album-width: 100px;
@@ -31,5 +56,11 @@
   }
   .albumImg {
     padding-bottom: 0;
+  }
+}
+
+@media (width < 500px) {
+  .asideDetails {
+    display: none;
   }
 }

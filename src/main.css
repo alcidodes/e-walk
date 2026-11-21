@@ -11,6 +11,7 @@
 :root {
 	/* Colours */
 	--light-green: #6dc37a;
+	--lighter-green: #dbefaf;
 	--sea-green: #2a9868;
 	--forest-green: #004a2a;
 	--light-grey: #aaaaaa;
@@ -43,6 +44,8 @@ body {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	margin: 0;
+	scrollbar-width: thin;
+	scrollbar-color: var(--light-grey) black;
 }
 
 * {
@@ -89,17 +92,15 @@ main {
 	width: 800px;
 	overflow-y: auto;
 	padding: 0 var(--padding);
-	border-left: var(--border);
-	/* border-right: var(--border); */
-	/* box-shadow: 0 0 10px 10px black; */
-	box-shadow: 20px 0px 10px 0px black;
+	box-shadow: 10px 0px 20px 0px black;
 	box-sizing: content-box;
 }
 
 aside {
 	background-color: var(--dark-grey);
-	min-width: 150px;
-	max-width: 250px;
+	min-width: 200px;
+	width: 250px;
+	overflow-y: auto;
 	padding: 0 var(--padding);
 }
 
@@ -117,10 +118,12 @@ nav {
 		width: unset;
 		overflow-y: visible;
 		border: none;
+		box-shadow: none;
 	}
 
 	aside {
-		max-width: none;
+		width: unset;
+		overflow-y: unset;
 		border-bottom: var(--border);
 	}
 }

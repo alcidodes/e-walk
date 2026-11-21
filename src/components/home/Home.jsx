@@ -1,4 +1,5 @@
 import Map from './Map'
+import MapAside from './MapAside'
 import MapNav from './MapNav'
 import styles from './Home.module.css'
 
@@ -10,8 +11,7 @@ const Home = () => {
         <MapNav />
       </main>
       <aside className={`${styles.mapAside} ${styles.darkText}`}>
-        <p>aside here</p>
-        <p>and here</p>
+        <MapAside />
       </aside>
     </>
   )

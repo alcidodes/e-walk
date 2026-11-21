@@ -43,7 +43,8 @@ const musicData = [{
   favTracks: [
     "Souvenir",
     "Bite The Hand",
-    "Salt In The Wound,4. Me & My Dog"
+    "Salt In The Wound",
+    "Me & My Dog"
   ],
   notes: "i absolutely adore the above four tracks, but don't really care for Stay Down or Ketchum, ID"
 }, {
@@ -99,7 +100,7 @@ const musicData = [{
   artist: "Desert Sessions",
   album: "The Desert Sessions, Vols. 9 & 10",
   year: "2003",
-  genre: "alternative rock",
+  genre: "alt rock",
   favTracks: [
     "Crawl Home",
     "Dead in Love",
@@ -123,7 +124,7 @@ const musicData = [{
   artist: "Gorillaz",
   album: "Demon Days",
   year: "2005",
-  genre: "alternative rock",
+  genre: "alt rock",
   favTracks: [
     "Kids With Guns",
     "Dare",
@@ -517,7 +518,7 @@ const musicData = [{
   artist: "Muse",
   album: "Origin Of Symmetry",
   year: "2001",
-  genre: "alternative rock",
+  genre: "alt rock",
   favTracks: [
     "Hyper Music",
     "Plug In Baby",

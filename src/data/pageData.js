@@ -1,7 +1,7 @@
 const pageData = [{
   path: "./about",
   icon: "info.png",
-  alt: "info",
+  name: "info",
   pos: {
     left: 130,
     top:  120
@@ -9,7 +9,7 @@ const pageData = [{
 }, {
   path: "./links",
   icon: "pointer.png",
-  alt: "links",
+  name: "links",
   pos: {
     left: 170,
     top:  120
@@ -17,7 +17,7 @@ const pageData = [{
 }, {
   path: "./guestbook",
   icon: "person.png",
-  alt: "guestbook",
+  name: "guestbook",
   pos: {
     left: 280,
     top:  180
@@ -25,7 +25,7 @@ const pageData = [{
 }, {
   path: "./bugs",
   icon: "bug.png",
-  alt: "insects",
+  name: "insects",
   pos: {
     left: 225,
     top:  270
@@ -33,7 +33,7 @@ const pageData = [{
 }, {
   path: "./photos",
   icon: "camera.png",
-  alt: "photos",
+  name: "photos",
   pos: {
     left: 225,
     top:  310
@@ -41,7 +41,7 @@ const pageData = [{
 }, {
   path: "./music",
   icon: "music.png",
-  alt: "music",
+  name: "music",
   pos: {
     left: 720,
     top:  390
@@ -49,7 +49,7 @@ const pageData = [{
 }, {
   path: "./media_log",
   icon: "book.png",
-  alt: "media log",
+  name: "media log",
   pos: {
     left: 760,
     top:  390
@@ -57,7 +57,7 @@ const pageData = [{
 }, {
   path: "./recipes",
   icon: "food.png",
-  alt: "cookbook",
+  name: "cookbook",
   pos: {
     left: 740,
     top:  220
@@ -65,7 +65,7 @@ const pageData = [{
 }, {
   path: "./terminal",
   icon: "unknown.png",
-  alt: "terminal",
+  name: "terminal",
   pos: {
     left: 780,
     top:  220
@@ -73,7 +73,7 @@ const pageData = [{
 }, {
   path: "./chainmail",
   icon: "unknown.png",
-  alt: "chainmail",
+  name: "chainmail",
   pos: {
     left: 280,
     top:  310
@@ -81,7 +81,7 @@ const pageData = [{
 }, {
   path: "./shrines/tlt",
   icon: "skull.png",
-  alt: "tlt shrine",
+  name: "tlt shrine",
   pos: {
     left: 385,
     top:  45
@@ -89,7 +89,7 @@ const pageData = [{
 }, {
   path: "./shrines/kglw",
   icon: "kglw.png",
-  alt: "kglw shrine",
+  name: "kglw shrine",
   pos: {
     left: 590,
     top:  160
@@ -97,7 +97,7 @@ const pageData = [{
 }, {
   path: "./shrines/deltarune",
   icon: "deltarune.png",
-  alt: "dt shrine",
+  name: "dt shrine",
   pos: {
     left: 480,
     top:  350

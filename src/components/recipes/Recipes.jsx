@@ -1,15 +1,14 @@
-import { Link } from 'react-router'
 import recipeData from '../../data/recipeData'
+import Nav from '../nav/Nav'
 import styles from './Recipes.module.css'
 
 const Recipes = () => {
   return (
     <>
       <aside>
-        <nav><Link to="/">&lt;- home</Link></nav>
-        <p>Text n stuff, describe the page here or even put a little image</p>
-        <p>Recipes n such yk</p>
-        <p>I plan on adding more later, plus photos</p>
+        <Nav />
+        <h1>The cookbook</h1>
+        <p>here's some recipes</p>
       </aside>
       <main id="content" className={styles.recipeContainer}>
         {RecipePages()}

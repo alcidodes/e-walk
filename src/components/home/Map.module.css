@@ -1,11 +1,17 @@
 /* Map */
 
+.titleText {
+	font-family: "VT323", monospace;
+	font-size: 2em;
+	color: black;
+	margin: 0;
+}
+
 .map {
 	display: flex;
 	position: relative;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
 }
 .map * {
   position: absolute;

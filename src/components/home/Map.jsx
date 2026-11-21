@@ -7,17 +7,19 @@ const Map = () => {
   return (
     <div className={styles.map}>
       <img src={mapImgPath + "map.png"} alt="" />
+      <h1 className={styles.titleText} style={{ top: "10px", left: "1ch" }}>Welcome to the</h1>
+      <h1 className={styles.titleText} style={{ top: "40px", left: "3ch" }}>electronic trail</h1>
       {pageData.map(page => MapLink(page))}
     </div>
   )
 }
 
-const MapLink = ({ path, icon, alt, pos }) => {
+const MapLink = ({ path, icon, name, pos }) => {
   return (
-    <Link to={path} key={alt}>
+    <Link to={path} key={name}>
       <img src={mapIconPath + icon}
         style={{ left: pos.left+'px', top: pos.top+'px' }}
-        alt={alt} title={alt}
+        alt={name} title={name}
       />
     </Link>
   )

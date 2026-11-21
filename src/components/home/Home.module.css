@@ -8,7 +8,6 @@
 .darkText a:visited {
   color: black;
 }
-.darkText h1,
 .darkText a:hover,
 .darkText a:focus {
   color: var(--sea-green);
@@ -16,12 +15,10 @@
 
 /* Map */
 
+.mapContainer,
 .mapAside {
-  background-color: var(--light-green);
-  min-width: var(--map-aside-width);
-  height: var(--map-height);
-  margin: auto auto auto var(--margin);
-	box-shadow: inset 0 0 5px 5px black;
+  border: 15px solid black;
+  box-sizing: content-box;
 }
 
 .mapContainer {
@@ -30,6 +27,28 @@
   height: var(--map-height);
   margin: auto 0 auto auto;
   padding: 0;
-	box-shadow: inset 0 0 5px 5px black;
-	border: none;
+  box-shadow: none;
+  overflow: auto;
+}
+
+.mapAside {
+  background-color: var(--light-green);
+  min-width: var(--map-aside-width);
+  height: var(--map-height);
+  margin: auto auto auto calc(-1 * var(--margin));
+}
+
+@media (width < 800px) {
+	.layout {
+		flex-direction: column;
+	}
+
+  .mapContainer {
+    width: 100%;
+    border: none;
+  }
+
+  .mapAside {
+    display: none;
+  }
 }

@@ -1,0 +1,44 @@
+/* Signpost */
+
+.signpost,
+.signpost > * {
+	display: flex;
+	align-self: center;
+	text-align: center;
+}
+
+.signpost {
+	background-image: linear-gradient(to right, #4d3221, #62462c, #4d3221, #1a1d1e);
+	flex-direction: column;
+	width: 30px;
+	height: fit-content;
+	margin-top: var(--margin);
+}
+.signpost > *:last-child {
+	margin-bottom: 80px;
+}
+
+.signpost > * {
+	background-image: linear-gradient(to bottom, #4d3221, #62462c, #4d3221, #1a1d1e);
+	width: max-content;
+	max-width: 220px;
+	height: fit-content;
+	clip-path: polygon(0% 50%, 10% 100%, 90% 100%, 100% 50%, 90% 0%, 10% 0%);
+	justify-content: center;
+	margin-top: 10px;
+	padding: 0 10px;
+}
+.signpost > * > * {
+	width: fit-content;
+	padding: 5px;
+	align-self: center;
+}
+.signpost > * p {
+  margin: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+.signpost > * a,
+.signpost > * a:visited {
+	text-decoration: none;
+}
