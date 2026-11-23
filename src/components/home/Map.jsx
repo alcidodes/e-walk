@@ -16,9 +16,9 @@ const Map = () => {
 
 const MapLink = ({ path, icon, name, pos }) => {
   return (
-    <Link to={path} key={name}>
+    <Link to={path} key={name} style={{ left: pos.left+'px', top: pos.top+'px' }}>
       <img src={mapIconPath + icon}
-        style={{ left: pos.left+'px', top: pos.top+'px' }}
+        
         alt={name} title={name}
       />
     </Link>

@@ -16,8 +16,12 @@
 .map * {
   position: absolute;
 }
+.map a {
+	width: 30px;
+	height: 30px;
+}
 .map > a img {
-	width: auto;
+	width: 100%;
 	transition: .1s ease-in-out 0s;
 }
 .map > a img:hover {

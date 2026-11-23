@@ -44,9 +44,8 @@
   .bugContainer figure {
     margin: 0;
   }
-  .bugContainer .imgContainer {
+  .bugContainer .figureImg {
     width: 100%;
     height: unset;
-    margin: 0;
   }
 }

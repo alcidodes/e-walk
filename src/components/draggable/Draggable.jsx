@@ -1,7 +1,8 @@
 // Source: https://stackoverflow.com/a/75269362
 import { useState, useEffect } from 'react'
+import styles from './Draggable.module.css'
 
-const Draggable = ({ children, dragArea }) => {
+const Draggable = ({ children }) => {
   const [pressed, setPressed] = useState(false)
   const [pos, setPos] = useState({x: 0, y: 0})
   const [initMousePos, setInitMousePos] = useState({})
@@ -15,8 +16,10 @@ const Draggable = ({ children, dragArea }) => {
   useEffect(() => {
     const onMouseMove = (e) => {
       setPos({
-        x: getBoundedValue(pos.x + e.clientX - initMousePos.x, -1 * dragArea.width, 0),
-        y: getBoundedValue(pos.y + e.clientY - initMousePos.y, -1 * dragArea.height, 0)
+        // x: getBoundedValue(pos.x + e.clientX - initMousePos.x, -1 * dragArea.width, 0),
+        // y: getBoundedValue(pos.y + e.clientY - initMousePos.y, -1 * dragArea.height, 0)
+        x: pos.x + e.clientX - initMousePos.x,
+        y: pos.y + e.clientY - initMousePos.y
       })
       e.preventDefault()
     }
@@ -32,6 +35,7 @@ const Draggable = ({ children, dragArea }) => {
   
   return (
     <div
+      className={styles.draggable}
       style={{ transform: `translate(${pos.x}px, ${pos.y}px)` }}
       onMouseDown={onMouseDown}
     >

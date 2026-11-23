@@ -15,9 +15,6 @@ const MapNav = () => {
           <MapNavDiv icon="waterways.png" name="waterways" />
           <MapNavDiv icon="sealed-road.png" name="sealed road" />
           <MapNavDiv icon="walking-track.png" name="walking track" />
-          {/* <li><div><img src={mapIconPath + "waterways.png"} alt="" />waterways</div></li>
-          <li><div><img src={mapIconPath + "sealed-road.png"} alt="" />sealed road</div></li>
-          <li><div><img src={mapIconPath + "walking-track.png"} alt="" />walking track</div></li> */}
           {pageData.map(page => MapNavLink(page))}
         </ul>
       </div>
@@ -26,9 +23,6 @@ const MapNav = () => {
           <MapNavDiv icon="warning.png" name="Warning" />
           <MapNavDiv icon="phone.png" name="not recommended for mobile viewing" />
           <MapNavDiv icon="js.png" name="ensure javascript is enabled" />
-          {/* <li><div><img src={mapIconPath + "warning.png"} alt="" /><h2>Warning</h2></div></li>
-          <li><div><img src={mapIconPath + "phone.png"} alt="" />not recommended for mobile viewing</div></li>
-          <li><div><img src={mapIconPath + "js.png"} alt="" />ensure javascript is enabled</div></li> */}
           <MapNavLink path="./bug_spray" icon="bug.png"
             name="insect repellent recommended" style={{ textDecoration: "none" }}
           />

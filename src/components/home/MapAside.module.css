@@ -31,9 +31,12 @@
 
 /* Corkboard items */
 
+.corkboard > * {
+  box-shadow: 1px 4px 5px rgba(0,0,0,0.5);
+}
+
 .note,
 .photo {
-  box-shadow: 1px 4px 5px rgba(0,0,0,0.2);
 	padding: 10px;
 }
 

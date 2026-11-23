@@ -1,0 +1,61 @@
+:root {
+  --figure-border-width: 20px;
+  --figure-padding: 30px;
+}
+
+.photoContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow-x: auto;
+  width: 100%;
+}
+.photoContainer figure:nth-child(2n) { 
+  margin-top: 40px;
+}
+.photoContainer figure:nth-child(3n) {
+  margin-bottom: 60px;
+}
+/* .photoContainer figure:nth-child(4n) { 
+  transform: rotate(3deg);
+}
+.photoContainer figure:nth-child(5n) { 
+  transform: rotate(-2deg);
+}
+.photoContainer figure:nth-child(6n) {
+  transform: rotate(-3deg);
+} */
+
+.photoContainer figure {
+  background-color: white;
+  border: var(--figure-border-width);
+  margin: var(--margin);
+  padding: var(--figure-padding);
+}
+.photoContainer figcaption {
+  color: black;
+  text-align: center;
+  margin-top: var(--margin);
+}
+.photoContainer .figureImg {
+  width: 350px;
+}
+.photoContainer .figureImg img {
+  border: 5px inset var(--light-grey);
+  filter: brightness(95%);
+}
+
+@media (width < 500px) {
+  .photoContainer {
+    flex-direction: column;
+    padding: 0;
+  }
+  .photoContainer figure {
+    margin: 0;
+  }
+  .photoContainer .figureImg {
+    width: 100%;
+    height: unset;
+  }
+}

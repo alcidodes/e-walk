@@ -1,12 +1,11 @@
 import { Link } from 'react-router'
+import { Helmet } from 'react-helmet'
 import { mapImgPath } from '../../constants'
 
 import changelog from '../../data/changelog'
 
-import badge from '../../images/svg/badge.svg'
 import miniBrochure from '../../images/svg/miniBrochure.svg'
-
-import Signpost from '../signpost/Signpost'
+import powerLine from '../../images/svg/powerLine.svg'
 
 import styles from './MapAside.module.css'
 
@@ -20,7 +19,7 @@ const MapAside = () => {
         
       <div className={styles.corkboard}>
         <Link className={styles.animatedImg} id={styles.left} to="./kglw"
-          style={{ zIndex: 1, alignSelf: "center", rotate: "10deg" }}
+          style={{ zIndex: 1, alignSelf: "center", rotate: "10deg", boxShadow: "none" }}
         >
           <img src={mapImgPath+"warning-croc.png"} alt="beware of crocodiles" title="beware of crocodiles" />
         </Link>
@@ -52,31 +51,38 @@ const MapAside = () => {
           <img src={mapImgPath+"photo.png"} alt="nature photo" />
         </Link>
 
+        <img className={styles.animatedImg} id={styles.left}
+          src={powerLine} alt="electronic trail logo"
+          style={{ alignSelf: "flex-end", marginTop: "-40px", width: "90px", borderRadius: "60px" }}
+        />
+
         <div className={styles.note} id="cdr"
           style={{ alignSelf: "center", marginTop: "10px" }}
         >
-          <p>cd ring</p>
-          {/* <script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-variables.js"></script>
-          <script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-widget.js"></script> */}
+          <Helmet>
+            <script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-variables.js"></script>
+            <script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-widget.js"></script>
+          </Helmet>
         </div>
 
         <div className={styles.note} id="kglw-webring"
           style={{ marginTop: "10px" }}
         >
-          <p>kglw webring</p>
-          {/* <script type="text/javascript" src="https://kglw.neocities.org/onionring-variables.js"></script>
-          <script type="text/javascript" src="https://kglw.neocities.org/onionring-widget.js"></script> */}
+          <Helmet>
+            <script type="text/javascript" src="https://kglw.neocities.org/onionring-variables.js"></script>
+            <script type="text/javascript" src="https://kglw.neocities.org/onionring-widget.js"></script>
+          </Helmet>
         </div>
 
         <div className={styles.note}
           style={{ textAlign: "center", alignSelf: "center", marginTop: "10px" }}
         >
-          <a href="https://baccyflap.com/noai/?prv&s=ewa" target="_top">prev</a><p>|</p>
+          <a href="https://baccyflap.com/noai/?prv&s=ewa" target="_top">prev</a>
           <div>
             <a href="https://baccyflap.com/noai" target="_blank">no ai webring</a>
             <a href="https://baccyflap.com/noai/?rnd" target="_top" style={{ fontSize: "80%" }}>(random)</a>
           </div>
-          <p>|</p><a href="https://baccyflap.com/noai/?nxt&s=ewa" target="_top">next</a>
+          <a href="https://baccyflap.com/noai/?nxt&s=ewa" target="_top">next</a>
         </div>
       </div>
     </>
