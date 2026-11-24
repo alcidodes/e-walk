@@ -43,7 +43,6 @@
 .legend,
 .warnings {
 	display: block;
-	overflow: auto;
 	padding: 0 var(--padding);
 	border-top: var(--padding) solid white;
 	border-bottom: var(--padding) solid white;
@@ -52,6 +51,7 @@
 .legend {
 	width: var(--legend-width);
 	max-height: var(--legend-height);
+	overflow: auto;
 }
 .warnings {
 	width: var(--warnings-width);

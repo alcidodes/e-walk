@@ -10,7 +10,7 @@ const toAlbumImgPath = (id) => `${albumImgPath}${id}-Cover-Art.jpg`
 
 const Music = () => {
   return (
-    <>
+    <div>
       <aside>
         <Nav />
         <h1>Welcome to the album gallery</h1>
@@ -23,14 +23,13 @@ const Music = () => {
       <main id="content">
         {musicData.map(album => AlbumInfo(album))}
       </main>
-    </>
+    </div>
   )
 }
 
 const AlbumInfo = (album) => {
   return (
     <div className={styles.albumContainer} key={album.id}>
-      {/* <img className={styles.albumImg} src={toAlbumImgPath(album.id)}/> */}
       <LoadedImage
         className={styles.albumImg}
         src={toAlbumImgPath(album.id)}
@@ -44,7 +43,7 @@ const AlbumInfo = (album) => {
         </p>
         <div>
           <p>fav tracks:</p>
-          <ol>{album.favTracks.map((track, ind) => <li key={`${track}-${ind}`}>{track}</li>)}</ol>
+          <ol>{album.favTracks.map((track, ind) => <li key={ind}>{track}</li>)}</ol>
         </div>
         <p>
           notes:<br/>

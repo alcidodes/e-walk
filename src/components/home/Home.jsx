@@ -5,15 +5,15 @@ import styles from './Home.module.css'
 
 const Home = () => {
   return (
-    <>
-      <main id="content" className={`${styles.mapContainer} ${styles.darkText}`}>
+    <div className={styles.darkText}>
+      <main id="content" className={styles.mapContainer}>
         <Map />
         <MapNav />
       </main>
-      <aside className={`${styles.mapAside} ${styles.darkText}`}>
+      <aside className={styles.mapAside}>
         <MapAside />
       </aside>
-    </>
+    </div>
   )
 }
 

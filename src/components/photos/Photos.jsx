@@ -7,7 +7,7 @@ import styles from './Photos.module.css'
 
 const Photos = () => {
   return (
-    <>
+    <div>
       <aside>
         <Nav />
         <h1>Welcome to the photo gallery</h1>
@@ -16,7 +16,7 @@ const Photos = () => {
       <main id="content" className={styles.photoContainer}>
         {photoData.map(photo => Photo(photo))}
       </main>
-    </>
+    </div>
   )
 }
 

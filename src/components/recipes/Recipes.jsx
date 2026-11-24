@@ -4,7 +4,7 @@ import styles from './Recipes.module.css'
 
 const Recipes = () => {
   return (
-    <>
+    <div>
       <aside>
         <Nav />
         <h1>The cookbook</h1>
@@ -13,7 +13,7 @@ const Recipes = () => {
       <main id="content" className={styles.recipeContainer}>
         {RecipePages()}
       </main>
-    </>
+    </div>
   )
 }
 
@@ -65,12 +65,12 @@ const RecipePageSpread = (recipe) => {
         <h1>{recipe.name}</h1>
         <p>Serves: {recipe.serves}</p>
         <h2>Ingredients</h2>
-        <ul>{recipe.ingredients.map((ing, ind) => <li key={`${recipe.id}-ing-${ind}`}>{ing}</li>)}</ul>
+        <ul>{recipe.ingredients.map((ing, ind) => <li key={ind}>{ing}</li>)}</ul>
       </div>
       <div className={styles.seam} />
       <div className={styles.pageR}>
         <h2>Instructions</h2>
-        <ol>{recipe.instructions.map((ins, ind) => <li key={`${recipe.id}-ins-${ind}`}>{ins}</li>)}</ol>
+        <ol>{recipe.instructions.map((ins, ind) => <li key={ind}>{ins}</li>)}</ol>
         <div className={styles.pageTurn}><a href="#start">&lt;- back</a></div>
       </div>
     </div>

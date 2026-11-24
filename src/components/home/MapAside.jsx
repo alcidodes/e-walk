@@ -1,5 +1,5 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router'
-import { Helmet } from 'react-helmet'
 import { mapImgPath } from '../../constants'
 
 import changelog from '../../data/changelog'
@@ -9,7 +9,16 @@ import powerLine from '../../images/svg/powerLine.svg'
 
 import styles from './MapAside.module.css'
 
+const webringScripts = [
+  // "https://cdring.neocities.org/cdring/onionring-variables.js",
+  // "https://cdring.neocities.org/cdring/onionring-widget.js",
+  "https://kglw.neocities.org/onionring-variables.js",
+  "https://kglw.neocities.org/onionring-widget.js"
+]
+
 const MapAside = () => {
+  webringScripts.forEach(url => LoadExternalScript(url))
+
   return (
     <>
       <h1>Updates</h1>
@@ -56,23 +65,27 @@ const MapAside = () => {
           style={{ alignSelf: "flex-end", marginTop: "-40px", width: "90px", borderRadius: "60px" }}
         />
 
-        <div className={styles.note} id="cdr"
+        <div className={`${styles.note} ${styles.cdr}`} id="cdr"
           style={{ alignSelf: "center", marginTop: "10px" }}
         >
-          <Helmet>
-            <script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-variables.js"></script>
-            <script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-widget.js"></script>
-          </Helmet>
+          <div>
+            <div>
+              <p>This site is part of the <strong><a href="https://cdring.neocities.org/">CDRing</a></strong></p>
+              <div className={styles.cdrNav}>
+                <a className={styles.cdrPrev} href="https://cyanweb.neocities.org">&lt; Prev</a>
+                <a href="https://cdring.neocities.org/">
+                  <img className={styles.cdrBadge} src="https://cdring.neocities.org/ringcdimages/kgatlw2.jpg" alt="CDRing badge"/>
+                </a>
+                <a className={styles.cdrNext} href="https://rawrpawz1.neocities.org">Next &gt;</a>
+              </div>
+              <p><a href="https://cdring.neocities.org/">Index</a></p>
+            </div>
+          </div>
         </div>
 
-        <div className={styles.note} id="kglw-webring"
+        <div className={`${styles.note} ${styles.kglw}`} id="kglw-webring"
           style={{ marginTop: "10px" }}
-        >
-          <Helmet>
-            <script type="text/javascript" src="https://kglw.neocities.org/onionring-variables.js"></script>
-            <script type="text/javascript" src="https://kglw.neocities.org/onionring-widget.js"></script>
-          </Helmet>
-        </div>
+        />
 
         <div className={styles.note}
           style={{ textAlign: "center", alignSelf: "center", marginTop: "10px" }}
@@ -87,6 +100,19 @@ const MapAside = () => {
       </div>
     </>
   )
+}
+
+const LoadExternalScript = (url) => {
+  useEffect(() => {
+    const script = document.createElement('script')
+  
+    script.src = url
+    script.async = true
+  
+    document.body.appendChild(script)
+      
+    return (() => { document.body.removeChild(script) })
+  }, []);
 }
 
 export default MapAside

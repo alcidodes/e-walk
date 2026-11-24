@@ -7,6 +7,7 @@ import Bugs from './components/bugs/Bugs'
 import Music from './components/music/Music'
 import Recipes from './components/recipes/Recipes'
 import Photos from './components/photos/Photos'
+import TLT from './components/tlt/TLT'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/music" element={<Music />} />
       <Route path="/recipes" element={<Recipes />} />
       <Route path="/photos" element={<Photos />} />
+      <Route path="/shrines/tlt" element={<TLT />} />
     </Routes>
   </BrowserRouter>,
 )

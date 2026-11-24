@@ -7,7 +7,7 @@ import styles from './Bugs.module.css'
 
 const Bugs = () => {
   return (
-    <>
+    <div>
       <aside>
         <Nav />
         <h1>Welcome to the bug gallery</h1>
@@ -22,7 +22,7 @@ const Bugs = () => {
       <main id="content" className={styles.bugContainer}>
         {bugData.map(bug => Bug(bug))}
       </main>
-    </>
+    </div>
   )
 }
 

@@ -1,5 +1,6 @@
 :root {
-	--changelog-height: 140px;
+	--changelog-height: 130px;
+  --corkboard-height: 395px;
 }
 
 /* Changelog */
@@ -20,7 +21,7 @@
 	background: url("../../images/map/noise.png");
 	background-size: cover;
 	background-repeat: repeat-y;
-  height: 380px;
+  height: var(--corkboard-height);
   padding: var(--padding);
   overflow: auto;
   border: 5px inset #56936b; 
@@ -79,39 +80,36 @@
 /* CDRing styling */
 /* Source: https://cdring.neocities.org/cdring/onionring.css */
 
-#cdr {
-  width: 150px;
+.cdr {
+  width: 180px;
 }
-#cdr p {
+.cdr p {
   margin: 0.3em 0; 
 }
-
-.cdrWidget {
+.cdr > div > div {
   text-align: center;
 }
-
-.cdrBadge {
-  display: block;
-  max-width: 100px;
-  height: auto;
-	margin: 0.3em 0; 
-}
-
-.cdrNav {
+.cdr > div > div > div {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.3em;
   margin: 0.3em 0; 
 }
-.cdrNav .cdrPrev,
-.cdrNav .cdrNext {
+.cdr > div > div > div > a {
   font-weight: bold;
   text-decoration: none;
+}
+.cdr img {
+  display: block;
+  max-width: 100px;
+  height: auto;
+	margin: 0.3em 0; 
 }
 
 /* KGLW webring styling */
 
-#kglwButton {
-	margin: 0 var(--margin);
+.kglw {
+	/* margin: 0 var(--margin); */
+  gap: var(--margin);
 }

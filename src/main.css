@@ -21,7 +21,7 @@
 	--font: monospace;
 	--heading-font: monospace;
 	--font-size: medium;
-	--line-height: 1.2;
+	--line-height: 1;
 
 	/* Other */
 	--sidebar-width: 300px;
@@ -47,13 +47,15 @@ body {
 	scrollbar-width: thin;
 	scrollbar-color: var(--light-grey) black;
 }
+body > div {
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	width: 100vw;
+}
 
 * {
   box-sizing: border-box;
-}
-
-p, h1, h2, nav {
-	margin: var(--margin) 0;
 }
 
 ::selection {
@@ -70,6 +72,9 @@ a:focus {
 	text-decoration: underline;
 }
 
+p, h1, h2, nav {
+	margin: var(--margin) 0;
+}
 h1 {
 	font-family: var(--heading-font);
 	font-size: 1.2em;
@@ -77,13 +82,6 @@ h1 {
 }
 h2 {
 	font-size: 1.1em;
-}
-
-.layout {
-	display: flex;
-	flex-direction: row;
-	height: 100vh;
-	width: 100vw;
 }
 
 main {
@@ -109,8 +107,18 @@ nav {
 	flex-direction: column;
 }
 
+button {
+	font-family: var(--font);
+	font-size: var(--font-size);
+	line-height: var(--line-height);
+	color: black;
+	background-color: var(--light-grey);
+	border: none;
+	cursor: pointer;
+}
+
 @media (width < 500px) {
-	.layout {
+	body > div {
 		flex-direction: column;
 	}
 
